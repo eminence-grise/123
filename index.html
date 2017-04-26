@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Angular приложение</title>
+    <link href = "style.css" rel="stylesheet">
+  </head>
+
+  <body ng-app="myApp" ng-controller="MyController">
+		<render-cart class = "something"></render-cart>
+	    
+    <h1>Мини интернет магазин</h1>
+    
+    <ul>
+      <li ng-repeat="item in items">
+        {{item.name}}
+        <button ng-click="addToCart(item)">+</button>
+      </li>
+    </ul>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+		
+		<script type="text/javascript" src = "js/app/myApp.js"></script>
+		<script type="text/javascript" src = "js/app/controllers.js"></script>
+		<script type="text/javascript" src = "js/app/service.js"></script>
+		<script type="text/javascript" src = "js/app/directive.js"></script>
+  </body>
+</html>
